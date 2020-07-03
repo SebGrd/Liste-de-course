@@ -36,23 +36,29 @@
         align-items: center;
         padding: 10px 15px;
         border-bottom: 1px solid #989797;
-        background: #fafafa;
+        background: #fcfcfc;
 
         &.is-complete {
-            background: #d6d6d6;
             .title {
                 text-decoration: line-through;
+                opacity: 0.5;
             }
         }
 
         .title {
+            position: relative;
+            padding-left: 25px;
             font-size: 20px;
             font-weight: 600;
+            .green{
+                color: green;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
 
-        .green{
-            color: green;
-        }
 
         .controls{
             display: flex;

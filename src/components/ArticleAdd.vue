@@ -1,6 +1,6 @@
 <template>
     <div class="add-article">
-        <input type="text" placeholder="Nom de l'article" v-model="title">
+        <input type="text" placeholder="Nom de l'article" v-on:keyup.enter="createArticleObject" v-model="title">
         <button v-on:click="createArticleObject">Ajouter</button>
     </div>
 </template>
@@ -38,17 +38,19 @@
         align-items: center;
         padding: 8px 15px;
         background: #f1f1f1;
+        margin-bottom: 6px;
+        box-shadow: 0px 4px 4px 0px #d2d2d2a1;
         input{
             width: 100%;
-            border: 2px solid #ac54ef;
-            border-radius: 3px;
+            border: 2px solid transparent;
+            border-radius: 15px;
             background: white;
             padding: 6px;
             margin-right: 10px;
         }
         button{
             border: 2px solid #ac54ef;
-            border-radius: 3px;
+            border-radius: 15px;
             background: white;
             padding: 6px;
             font-weight: 600;

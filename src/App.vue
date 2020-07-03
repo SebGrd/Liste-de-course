@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <h1>Liste de course</h1>
+        <header>
+            <h1>Liste de course</h1>
+        </header>
         <ArticleAdd v-on:add-article="addArticle"></ArticleAdd>
         <Articles :articles="articles"
                   v-on:del-article="deleteArticle"
@@ -22,7 +24,6 @@
         },
         data() {
             return {
-                msg: 'Hello Word!!',
                 articles: []
             }
         },
@@ -54,15 +55,19 @@
     body {
         margin: 0;
         box-sizing: border-box;
+        background: #fcfcfc;
+        font-family: 'Nunito', sans-serif;
+        color: #232f3b;
     }
 
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        color: #232f3b;
+    header{
+        background: #f1f1f1;
+        padding: 10px 0;
     }
     h1{
         text-align: center;
-        text-decoration: underline;
-        text-decoration-color: #ac54ef;
+        margin: 0;
+        color: #ac54ef;
+        text-shadow: 0px 1px 3px #ad59edc9;
     }
 </style>
